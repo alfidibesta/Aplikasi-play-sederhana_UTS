@@ -113,16 +113,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             case R.id.play:
                 playAudio();
+                Toast.makeText(MainActivity.this, "Playing Music", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.pause:
                 pauseAudio();
+                Toast.makeText(MainActivity.this, "Music Paused", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.stop:
                 stopAudio();
+                Toast.makeText(MainActivity.this, "Music Stoped", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
